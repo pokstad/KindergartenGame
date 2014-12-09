@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <!-- Pull the engine from the Quintus CDN or load it locally -->
+    <!-- (use quintus-all.min.js for production) -->
+  </head>
+   <body>
+       <h1>Introduction</h1>
+       <p>Hi, my name is Paul and I am a computer programmer. </p>
+       <p>I went to school to learn special languages to tell computers what to do.</p>
+       <p>You can make computers do all sorts of things, even things that you couldn't do yourself.</p>
+       <p>Computers can't think on their own like we do, but we make them act smart by telling them exactly what to do.</p>
+       <p>My job is to be very careful giving the computer instructions so that it doesn't make mistakes or cause problems for the people using them.</p>
+       <p>If I'm not careful it won't do what I want it to do.</p>
+       <h1>Video Games</h1>
+       <p>Has anyone here played a video game before?</p>
+       <p>Video games are programs. A video game programmer has to tell the computer how to do everything to make the video game world.</p>
+       <p>I am going to show you how computer language can make a video game.</p>
+       <h2>Create the level</h2>
+       <p>First, we need to make the level: <a href="./platformer1">empty world</a></p>
+       <p>Our world is very lonely, there is no one inside it to play with.</p>
+       <h2>Add the Hero</h2>
+       <p>Our game needs a hero, but how do programmers put a hero in the game? With CODE!</p>
+       <strong><code>var player = stage.insert(new Q.Player());</code></strong>
+       <p>This is the special code that will add our hero to the game.</p>
+       <p>Let's see what happens when we tell the computer to add the hero: <a href="./platformer2">Hero added</a></p>
+       <h2>Follow the hero</h2>
+       <p>What happens if our hero goes too far to the right?</p>
+       <p>Oh no, we didn't tell the computer to follow the hero when it moves.</p>
+       <p>Remember, the computer always does exactly what we tell it to do.</p>
+       <p>Since we never told the computer to follow our hero, it never knew it was suppose to.</p>
+       <p>Let's add the special code to make the computer follow our hero.</p>
+       <em><code>stage.add("viewport").follow(player);</code></em>
+       <p>Now let's try to move the character to the same spot and see what happens:<a href="./platformer3">Viewport added</a></p>
+       <h2>Our hero is bored</h2>
+       <p>Our hero is getting bored because there is nothing to do in our world. Let's add a castle for the hero to find.</p>
+       <em><code>stage.insert(new Q.Tower({ x: 260, y: 210 }));</code></em>
+       <p><a href="./platformer4">Added a castle nearby.</a></p>
+       <p>Our hero gets bored from this too, so let's put the castle in a harder to reach place.</p>
+       <p>This time, we are going to change out code only a little bit so that the castle moves.</p>
+       <em><code>stage.insert(new Q.Tower({ x: 260, y: 210 }));</code></em>
+       <p><a href="./platformer5">Castle moved</a></p>
+       <h2>Our hero is lonely</h2>
+       <p>Our hero is getting lonely because there is no one else in his world to play with.</p>
+       <p>Let's add some bad guys to the game so our hero won't be lonely anymore.</p>
+       <p><em><code>stage.insert(new Q.Enemy({ x: 700, y: 0 }));</code></em></p>
+       <p><em><code>stage.insert(new Q.Enemy({ x: 800, y: 0 }));</code></em></p>
+       <p><em><code>stage.insert(new Q.Enemy({ x: 260, y: 0 }));</code></em></p>
+       <p>If we want 3 bad guys, then we need to use the same code 3 times.</p>
+       <p>We change each code a little bit so that the bad guys start in different spots.</p>
+       <p><a href="./platformer6">Bad guys added</a></p>
+   </body>
+</html>
